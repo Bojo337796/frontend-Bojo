@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        /*// Glow Border Animation //*/
+
+.animated-border-box, .animated-border-box-glow{
+  max-height: auto;
+  max-width: auto;
+  height: 62%;
+  width: 20%;
+  position: absolute;
+  overflow: hidden; 
+  z-index: 0;
+  /* Border Radius */
+	border-radius: 20px;
+}
+.animated-border-box{
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.animated-border-box-glow{
+  overflow: hidden;
+  /* Glow Blur */
+  filter: blur(20px);
+}
+
+.animated-border-box:before, .animated-border-box-glow:before {
+  content: '';
+  z-index: -2;
+  text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+	width: 99999px;
+	height: 99999px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+  /*border color, change middle color*/
+	background-image: conic-gradient(rgba(92, 0, 0, 0), #fa0909, rgba(0,0,0,0) 25%);
+  /* change speed here */
+	animation: rotate 3s linear infinite;
+}
+
+.animated-border-box:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+  /* border width */
+	left: 5px;
+	top: 5px;
+  /* double the px from the border width left */
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+  /*bg color*/
+	/* background: #1a1a1d; */
+    background-image: url(/Asset/BG_greyish.png);
+    background-size: cover;
+    border: 5px solid whitesmoke
+    backdrop-filter: blur(5px) ;
+  /*box border radius*/
+	border-radius: 20px;
+}
+
+@keyframes rotate {
+	100% {
+		transform: translate(-50%, -50%) rotate(1turn);
+	}
+}
+
+/*// Border Animation END//*/
+
+
+
+/*// Ignore This //*/
+body {
+  margin: 0px;
+}
+
+.center-box{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/Asset/BG_greyish2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bisque {
+    color: bisque;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.DP {
+   border-radius: 100%; 
+   width: 60%;
+}
+.DP:hover::before{
+    box-shadow: 0 0 15px #fa0909;
+    transform: scale(1.1);
+    transition: .5s;
+    z-index: -1;
+    
+
+}
+.DP:hover{
+    box-shadow: 0 3px 15px #fa0909;
+    transition: .5s;
+    z-index: -1;
+}
+
+
+.EvaWoosE{
+    max-width: 60%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding-top: 50px;
+    
+}
+
+.logo img{
+    max-width: 50px;
+    height: auto;
+    background-color: #353332;
+    border-radius: 100%;
+    transition: .5s;
+
+    
+}
+
+.logo img:hover:nth-child(1)::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #c2bbbd;
+    z-index: -1;
+}
+.logo img:nth-child(1)::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #c2bbbd;
+    transition: .5s;
+    z-index: -1;
+    background-color: #ef2c2c;
+    
+}
+
+.logo img:hover:nth-child(1) {
+    color: #ef2c2c;
+    box-shadow: 0 0 15px #fa0909;
+    text-shadow: 0 0 10px #ef2c2c;
+  }
+
+  @media only screen and (max-width: 919px) {
+
+    .animated-border-box, .animated-border-box-glow {
+    height: 62%;
+    width: 70%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 0%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding-top: 50px;
+    
+}
+
+
+    
+  }
+
+    </style>
+
+</head>
+<body>
+
+<!-- > child targetting > pseudo child
++ sibling targetting
+~ all applicable elements -->
+
+
+ <!-- This is a box -->
+ <div class="center-box">
+    <!-- START Box -->
+    <div class="animated-border-box-glow"></div>
+    <div class="animated-border-box">
+        <img class="EvaWoosE" src="Asset\eva_woose_logo.png" alt="logo">
+            <a href="https://www.linkedin.com/in/john-thomas-flancia-a1782b255/" target="_blank"><img class="DP" src="Asset\image__6_.png" alt="Bojo"></a>
+
+            <h1 class="bisque">John Thomas Flancia</h1>
+                 <p class="bisque" style="color:bisque; font-size: 25px; ">Web Master</p>
+                    <div class="logo">
+                        <a href="https://www.facebook.com/EvaWoosE"><img src="Asset\fb.png" alt="facebook"></a>
+                        <a href="mailto:jflancia@crescendocollective.com"><img src="Asset\email (1).png" alt="gmail"></a>
+                        <a href="tel:+639666666666"><img src="Asset\fone.png" alt="gmail"></a>
+
+                    </div>
+      <!-- Inside the Box -->
+    </div>
+    <!-- END -->
+  </div>
+
+</body>
+</html>
