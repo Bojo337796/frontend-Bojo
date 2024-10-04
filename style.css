@@ -1,0 +1,208 @@
+
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.651);
+    
+}
+
+.parent-1 {
+    text-align: center;
+}
+
+@media only screen and (min-width: 920px) {
+
+
+
+.bisque {
+    color: bisque;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-shadow:
+       3px 3px 0 #000,
+       0 3px 5px #000000d3,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.bisque.name {
+}
+
+
+.container {
+    width: 20%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+    
+}
+
+.profile-card {
+   border-radius: 40px;
+   align-items: center; 
+   text-align: center;
+   box-shadow: 0 5px 10px #fa0909;
+   background-color: #0000001a;
+   padding: 20px;
+   backdrop-filter: blur(2px);
+   
+}
+.evawoose{
+    max-width: 40%;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    transition: .5s;
+    
+}
+.evawoose:hover{
+    transition: .5s;
+    transform: scale(1.1);
+
+}
+
+
+.dp {
+   border-radius: 100%; 
+   width: 60%;
+   transition: .5s;
+   
+}
+/* 
+.dp::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #c2bbbd;
+    transition: .5s;
+    z-index: -1;
+    background-color: #ef2c2c;
+    
+}
+.dp img:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #c2bbbd;
+    z-index: -1;
+} */
+.dp:hover{
+    box-shadow: 0 3px 15px #fa0909;
+    transform: scale(1.1);
+    transition: .5s;
+    z-index: -1;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 100%;
+    position: relative;
+    /* left: 50%;
+    transform: translate(-50% , -50%); */
+    padding-top: 20px;
+    
+}
+
+.logo img{
+    max-width: 50px;
+    height: auto;
+    background-color: rgb(43, 42, 42);
+    border-radius: 100%;
+    transition: .5s;
+}
+
+/* .logo img:hover:nth-child(1)::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #c2bbbd;
+    z-index: -1;
+}
+
+.logo img:nth-child(1)::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #c2bbbd;
+    transition: .5s;
+    z-index: -1;
+    background-color: #ef2c2c;    
+} */
+
+.logo img:hover:nth-child(1) {
+    color: #ef2c2c;
+    box-shadow: 0 0 15px #fa0909;
+    text-shadow: 0 0 10px #ef2c2c;
+    transform: scale(1.1);
+    z-index: -1;
+  }
+
+   
+    
+}
+
+    
+ 
+ 
+
+@media only screen and (max-width: 919px) {
+
+  
+       .evawoose{
+        max-width: 50%;
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+
+    .bisque {
+        color: bisque;
+        font-family:Arial, Helvetica, sans-serif;
+        width: 100%;
+        text-shadow:
+           3px 3px 0 #000,
+           0 3px 5px #000000d3,  
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+           1px 1px 0 #000;
+    }
+
+    .bisque.name {
+    }
+    
+    .container {
+        width: 70%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50% , -50%);
+
+    }
+    .profile-card {
+        border-radius: 40px;
+        align-items: center; 
+        text-align: center;
+        box-shadow: 0 5px 15px #fa0909;
+        padding: 10px;
+        backdrop-filter: blur(1px);
+    }
+    .dp {
+        border-radius: 100%; 
+        width: 60%;
+        box-shadow: 0 5px 15px #fa0909;
+     }
+     
+    
+     
+     .logo{
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         padding-top: 20px;
+     }
+     
+     .logo img{
+         max-width: 40px;
+         box-shadow: 0 0 15px #fa0909;
+         background-color: rgb(43, 42, 42);
+         border-radius: 100%;
+     }
+}
