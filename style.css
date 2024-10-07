@@ -11,6 +11,7 @@ body {
 
 .parent-1 {
     text-align: center;
+    
 }
 
 @media only screen and (min-width: 920px) {
@@ -47,15 +48,15 @@ body {
    align-items: center; 
    text-align: center;
    box-shadow: 0 5px 10px #fa0909;
-   background-color: #0000001a;
+   background-color: #00000004;
    padding: 20px;
-   backdrop-filter: blur(2px);
+   backdrop-filter: blur(1px);
    
 }
 .evawoose{
-    max-width: 40%;
+    max-width: 200px;
     padding-bottom: 20px;
-    padding-top: 50px;
+    padding-top: 90px;
     transition: .5s;
     
 }
